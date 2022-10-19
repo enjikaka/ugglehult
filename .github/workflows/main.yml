@@ -16,7 +16,7 @@ jobs:
         with:
           name: dist-without-markdown
           path: main.pdf
-  pdf:
+  epub:
     name: Build ePUB
     runs-on: ubuntu-latest
     steps:
