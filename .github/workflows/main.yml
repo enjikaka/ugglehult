@@ -14,7 +14,7 @@ jobs:
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: dist-without-markdown
+          name: PDF
           path: main.pdf
   epub:
     name: Build ePUB
@@ -29,5 +29,5 @@ jobs:
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: dist-without-markdown
+          name: ePUB
           path: main.epub
