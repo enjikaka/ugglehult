@@ -2,7 +2,7 @@ name: Build book
 on: [push]
 jobs:
   pdf:
-    name: Build PDF and EPUB
+    name: Build PDF
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
@@ -10,15 +10,24 @@ jobs:
       - name: PDF
         uses: Glatek/pdflatex-action@main
         with:
-          args: '-s -o output.pdf main.tex'
-      - name: ePUB
-        uses: Glatek/pandoc-action@main
-        with:
-          args: '-f latex main.tex -o output.epub'
+          args: '-enable-write18 main.tex'
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
         with:
           name: dist-without-markdown
-          path: |
-            output.pdf
-            output.epub
+          path: main.pdf
+  pdf:
+    name: Build ePUB
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: ePUB
+        uses: Glatek/pandoc-action@main
+        with:
+          args: '-f latex main.tex -o main.epub'
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist-without-markdown
+          path: main.epub
