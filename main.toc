@@ -1,0 +1,4 @@
+\babel@toc {swedish}{}\relax 
+\contentsline {chapter}{\numberline {1}Till Ugglehult.}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Första dagen vid Ugglehult.}{5}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Herr Peterson visar sin gård.}{9}{chapter.3}%

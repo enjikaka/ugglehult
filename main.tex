@@ -1,0 +1,33 @@
+\documentclass[11pt,twoside,openright]{book}
+
+\usepackage[swedish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{svg}
+\usepackage{float}
+\usepackage{caption}
+\usepackage[size=pocket, bleed=false, paper=cream, color=false]{createspace}
+
+\captionsetup[figure]{font={small,bf,onehalfspacing},labelformat=empty}
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+\title{Ugglehultsboken}
+\author{Carl Magnus Peterson \and Jeremy Karlsson\thanks{Redigering och modernisering år 2022}}
+\date{October 2022}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+\tableofcontents
+
+\mainmatter
+\include{./chapters/1}
+\include{./chapters/2}
+\include{./chapters/3}
+
+\backmatter
+
+\end{document}
