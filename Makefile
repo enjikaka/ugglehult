@@ -6,4 +6,7 @@ epub:
 pdf:
 	pdflatex -enable-write18 main.tex
 
+pdf2:
+	pandoc -f latex main.tex -o Ugglehult-pandoc.pdf
+
 build: epub pdf
